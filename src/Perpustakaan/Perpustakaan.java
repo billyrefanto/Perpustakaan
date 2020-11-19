@@ -56,7 +56,7 @@ public class Perpustakaan {
         }
     }
     public void showByName(){
-        ShortJudul sortJudul = new ShortJudul();
+        SortJudul sortJudul = new SortJudul();
         if (dataKoleksis.isEmpty()){
             System.out.println("Tidak ada data koleksi!");
         }else{
@@ -68,7 +68,7 @@ public class Perpustakaan {
 
     }
 
-    static class ShortJudul implements Comparator<DataKoleksi> {
+    static class SortJudul implements Comparator<DataKoleksi> {
         @Override
         public int compare(DataKoleksi nama1, DataKoleksi nama2) {
             return nama1.getNama().compareTo(nama2.getNama());
