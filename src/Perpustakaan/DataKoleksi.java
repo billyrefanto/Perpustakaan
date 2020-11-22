@@ -18,6 +18,10 @@ public abstract class DataKoleksi {
         return nama;
     }
 
+    public int getNoKoleksi() {
+        return noKoleksi;
+    }
+
     protected abstract void Display();
 
 

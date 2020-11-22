@@ -19,7 +19,9 @@ public class Main {
                             "2. Menampilkan Semua koleksi \n" +
                             "3. Menampikan Berdasarkan jenis\n" +
                             "4. Menampilkan Berdasarkan Urutan Nama\n" +
-                            "5. Keluar\n" +
+                            "5. Hapus Data Berdasarkan No Koleksi\n" +
+                            "6. Hapus Semua Data Koleksi\n" +
+                            "7. Keluar\n" +
                             "===========================================\n"
             );
             System.out.print("Menu Ke - ");
@@ -134,6 +136,14 @@ public class Main {
                 break;
                 case 4:
                     perpustakaan.showByName();
+                    break;
+                case 5:
+                    System.out.println("Masukan Nomer Koleksi : ");
+                    noKoleksi = scanner.nextInt();
+                    perpustakaan.removeByNomerKoleksi(noKoleksi);
+                    break;
+                case 6:
+                    perpustakaan.removeAll();
                     break;
                 default:
                     System.exit(0);

@@ -51,7 +51,8 @@ public class Perpustakaan {
             System.out.println("Tidak ada data koleksi!");
         } else {
             for (DataKoleksi listKoleksi : dataKoleksis) {
-                if (listKoleksi.jenis.equals("Buku"))listKoleksi.Display();
+                if (listKoleksi.jenis.equals("Buku"))
+                    listKoleksi.Display();
             }
         }
     }
@@ -65,7 +66,27 @@ public class Perpustakaan {
                 listKoleksi.Display();
             }
         }
+    }
 
+    public void removeAll(){
+        if (dataKoleksis.isEmpty()){
+            System.out.println("Tidak ada data koleksi!");
+        }else{
+            dataKoleksis.clear();
+            System.out.println("Data Koleksi Berhasil Dihapus");
+        }
+    }
+    public void removeByNomerKoleksi(int nomerKoleksi){
+        if (dataKoleksis.isEmpty()){
+            System.out.println("Tidak ada data koleksi!");
+        }else{
+            for (int i = 0; i < dataKoleksis.size() ; i++) {
+               if (nomerKoleksi == dataKoleksis.get(i).noKoleksi){
+                   dataKoleksis.remove(i);
+                   System.out.println("Nomer Koleksi " + nomerKoleksi + " Berhasil di hapus!");
+               }
+            }
+        }
     }
 
     static class SortJudul implements Comparator<DataKoleksi> {
