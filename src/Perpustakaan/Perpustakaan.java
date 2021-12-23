@@ -51,7 +51,7 @@ public class Perpustakaan {
             System.out.println("Tidak ada data koleksi!");
         } else {
             for (DataKoleksi listKoleksi : dataKoleksis) {
-                if (listKoleksi.jenis.equals("Buku"))
+                if (listKoleksi.jenis.equals("Cakram Digital"))
                     listKoleksi.Display();
             }
         }

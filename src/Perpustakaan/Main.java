@@ -12,6 +12,9 @@ public class Main {
         String nama, penerbit, pengarang, issn, isbn, doi, arxivId, jenisTerbit, jenisMedia, tanggalTerbit, jenis, status;
 
         do {
+            
+
+
             System.out.println(
                     "==============[Pilih Menu]=================\n" +
                             "Perpustakaan \n" +
@@ -146,8 +149,8 @@ public class Main {
                     perpustakaan.removeAll();
                     break;
                 default:
-                    System.exit(0);
                     System.out.println("Keluar!");
+                    System.exit(0);
             }
         } while (true);
     }
